@@ -19,14 +19,14 @@
             for(i=x.length-1;i>=0;i--){
               var z=Math.pow(10,i);
               var a=Math.floor(x/z);
-                   x=x-z;
+                   x=x-z*a;
                   a=Math.pow(8,i)*a;
                   realx=a+realx;
             }
             for(j=y.length-1;j>=0;j--){
                 var c=Math.pow(10,j);
                 var b=Math.floor(y/c);
-                   y=y-c;
+                   y=y-c*b;
                   b=Math.pow(8,j)*b;
                   realy=b+realy;
             }
