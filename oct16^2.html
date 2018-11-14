@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <input id="first" type="number">
+        <input id="second" type="number">
+        <button type="button" onclick=" myFunction()">算算看</button>
+        <p id="demo"></p>
+        <p>貼心提醒!我不只可以16*16喔!我還可以其他數字呢!!</p>
+        
+        <script>
+
+           function myFunction() {
+            var x=document.getElementById("first").value; 
+            var y=document.getElementById("second").value;
+            var i;
+           var j;
+           var realx=0;
+           var realy=0;
+           
+            for(i=x.length-1;i>=0;i--){
+              var z=Math.pow(10,i);
+              var a=Math.floor(x/z);
+                   x=x-z;
+                  a=Math.pow(8,i)*a;
+                  realx=a+realx;
+            }
+            for(j=y.length-1;j>=0;j--){
+                var c=Math.pow(10,j);
+                var b=Math.floor(y/c);
+                   y=y-c;
+                  b=Math.pow(8,j)*b;
+                  realy=b+realy;
+            }
+                document.getElementById("demo").innerHTML =realx* realy;
+}
+
+</script>
+        </script>
+    </body>
+</html>
